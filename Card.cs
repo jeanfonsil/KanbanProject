@@ -19,11 +19,12 @@ namespace KanbanProject
         public int SprintId { get; set; }
         public Sprint Sprint { get; set; }
         public Status Status { get; set; }
-        public static List<Card> All()
-        {
-            var db = new KanbanContext();
-            return db.Cards.ToList();
-        }
+
+        //public static List<Card> All()
+        //{
+        //    var db = new KanbanContext();
+        //    return db.Cards.ToList();
+        //}
 
         public void Save()
         {
