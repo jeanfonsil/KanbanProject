@@ -1864,11 +1864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeanf\\source\\repos\\Kanban_project\\Kanban_project\\Kanban_project.csproj",
-      "projectName": "Kanban_project",
-      "projectPath": "C:\\Users\\jeanf\\source\\repos\\Kanban_project\\Kanban_project\\Kanban_project.csproj",
+      "projectUniqueName": "C:\\Users\\jeanf\\source\\repos\\KanbanProject\\KanbanProject\\KanbanProject.csproj",
+      "projectName": "KanbanProject",
+      "projectPath": "C:\\Users\\jeanf\\source\\repos\\KanbanProject\\KanbanProject\\KanbanProject.csproj",
       "packagesPath": "C:\\Users\\jeanf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeanf\\source\\repos\\Kanban_project\\Kanban_project\\obj\\",
+      "outputPath": "C:\\Users\\jeanf\\source\\repos\\KanbanProject\\KanbanProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jeanf\\AppData\\Roaming\\NuGet\\NuGet.Config",

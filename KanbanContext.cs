@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KanbanProject.Entities;
 
 namespace KanbanProject
 {
@@ -15,15 +16,6 @@ namespace KanbanProject
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=KanbanDb;Trusted_Connection=true;");
-        }
-        private static KanbanContext Instance;
-        public static KanbanContext GetInstance()
-        {
-            if (Instance == null)
-            {
-                Instance = new KanbanContext();
-            }
-            return Instance;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanbanProject
+namespace KanbanProject.Entities
 {
     public class Card
     {
@@ -19,19 +19,6 @@ namespace KanbanProject
         public int SprintId { get; set; }
         public Sprint Sprint { get; set; }
         public Status Status { get; set; }
-
-        //public static List<Card> All()
-        //{
-        //    var db = new KanbanContext();
-        //    return db.Cards.ToList();
-        //}
-
-        public void Save()
-        {
-            var db = KanbanContext.GetInstance();
-            db.Cards.Add(this);
-            db.SaveChanges();
-        }        
     }
     public enum Status
     {

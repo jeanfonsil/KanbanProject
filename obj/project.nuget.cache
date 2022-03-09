@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2IhPhwjR7VsJ7ya8zbUeXods80GwUaSvA36agpLisE1JQOQMXT0r9+hXSjzY4tOCAzzF7KObeDGwlLuEtGMPRA==",
+  "dgSpecHash": "kj3aXfMC8KpYbvr7GJne4AxZt3gKd92jmD9KxdU/uyJCsVlObYPV9Z/AaTPioDAzroPmkRp0MQpROENYzncibQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jeanf\\source\\repos\\Kanban_project\\Kanban_project\\Kanban_project.csproj",
+  "projectFilePath": "C:\\Users\\jeanf\\source\\repos\\KanbanProject\\KanbanProject\\KanbanProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jeanf\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

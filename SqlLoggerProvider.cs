@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Kanban
+namespace KanbanProject
 {
     public class SqlLoggerProvider : ILoggerProvider
     {

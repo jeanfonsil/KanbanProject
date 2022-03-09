@@ -5,24 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanbanProject
+namespace KanbanProject.Entities
 {
     public class Sprint
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Card> Cards { get; set; }
-        //public static List<Sprint> All()
+        //public void Save(IKanbanContext context)
         //{
-        //    var db = new KanbanContext();
-        //    return db.Sprints.ToList();
+        //    context.Save();
         //}
-
-        public void Save()
-        {
-            var db = KanbanContext.GetInstance();
-            db.Sprints.Add(this);
-            db.SaveChanges();
-        }
     }
 }
