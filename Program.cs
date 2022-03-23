@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using KanbanProject.Entities;
 using KanbanProject.Interface;
+using Microsoft.EntityFrameworkCore;
+using KanbanProject;
 
 namespace KanbanProject
 {

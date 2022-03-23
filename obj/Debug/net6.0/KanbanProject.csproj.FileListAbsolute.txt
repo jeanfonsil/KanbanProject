@@ -56,3 +56,7 @@ C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\obj\Debug\net6.0\KanbanP
 C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\obj\Debug\net6.0\ref\KanbanProject.dll
 C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\obj\Debug\net6.0\KanbanProject.pdb
 C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\obj\Debug\net6.0\KanbanProject.genruntimeconfig.cache
+C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\jeanf\source\repos\KanbanProject\KanbanProject\bin\Debug\net6.0\Scaffolding.Core.dll
