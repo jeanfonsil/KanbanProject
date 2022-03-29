@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using KanbanProject.Entities;
-using KanbanProject.Interface;
 using Microsoft.EntityFrameworkCore;
 using KanbanProject;
 
@@ -25,9 +24,6 @@ namespace KanbanProject
             Console.WriteLine("Hello, User");
             var AuxDelete = 0;
             var AuxAdd = 0;
-
-            DeleteService varDelete = new DeleteService();
-            DeleteEntity deleteEntity = new DeleteEntity();
 
             while (varWhileAdd == 1)
             {
@@ -89,20 +85,40 @@ namespace KanbanProject
                     break;
                 }
             }
+
             while (varWhileDelete == 1)
             {
                 Console.Write("Do you want to delete some entity of database? (Yes - 1, No - 0): ");
                 AuxDelete = int.Parse(Console.ReadLine());
-
                 if (AuxDelete == 1)
                 {
-                    deleteEntity.Delete(varDelete);
+                    Console.Write("Which entity do you want to delete? (User - 0, Sprint - 1, Card - 2): ");
+                    int ChoiceDelete = int.Parse(Console.ReadLine());
+                    Console.Write("Please, put the Id of the entity you want to delete: ");
+                    int Id = int.Parse(Console.ReadLine());
+                    using (var contexto = new KanbanContext())
+                    {
+                        switch (ChoiceDelete)
+                        {
+                            case 0:
+                                contexto.Users.RemoveRange(contexto.Users.Where(users => users.Id == Id));
+                                break;
+                            case 1:
+                                contexto.Sprints.RemoveRange(contexto.Sprints.Where(sprints => sprints.Id == Id));
+                                break;
+                            case 2:
+                                contexto.Users.RemoveRange(contexto.Users.Where(cards => cards.Id == Id));
+                                break;
+                        }
+                        Console.WriteLine("Entity deleted");
+                        contexto.SaveChanges();
+                    }
                 }
                 else
                 {
                     break;
-                }
-            }                                  
+                }             
+            }
         }
     }
 }

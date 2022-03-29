@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KanbanProject.Migrations
 {
     [DbContext(typeof(KanbanContext))]
-    [Migration("20220323200122_Initial")]
+    [Migration("20220328212621_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
