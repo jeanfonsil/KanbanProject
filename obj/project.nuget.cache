@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "QknOYFjD/6YP9wf+9MGp+tyxTLl6iDt/xGYRMlp492Nn8qGsGqSWDnM/UjBSntEIVzncTgr4vLUzDnhjZ8BwDg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jeanf\\source\\repos\\KanbanProjectFinal\\KanbanProjectFinal\\KanbanProjectFinal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
