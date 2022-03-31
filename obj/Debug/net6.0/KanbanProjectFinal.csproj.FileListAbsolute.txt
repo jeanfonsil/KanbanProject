@@ -25,3 +25,11 @@ C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\obj\Debug\net6
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\obj\Debug\net6.0\ref\KanbanProjectFinal.dll
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\obj\Debug\net6.0\KanbanProjectFinal.pdb
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\obj\Debug\net6.0\KanbanProjectFinal.genruntimeconfig.cache
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Npgsql.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Humanizer.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

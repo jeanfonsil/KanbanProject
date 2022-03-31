@@ -9,7 +9,8 @@ namespace KanbanProjectFinal.Entities
 {
     public class User
     {
-        [Required(ErrorMessage = "Id is required")]
+        [Key]
+        [Required(ErrorMessage = "Id is required")]     
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
