@@ -107,7 +107,7 @@ namespace KanbanProject
                                 contexto.Sprints.RemoveRange(contexto.Sprints.Where(sprints => sprints.Id == Id));
                                 break;
                             case 2:
-                                contexto.Users.RemoveRange(contexto.Users.Where(cards => cards.Id == Id));
+                                contexto.Cards.RemoveRange(contexto.Cards.Where(cards => cards.Id == Id));
                                 break;
                         }
                         Console.WriteLine("Entity deleted");
