@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using KanbanProject.Entities;
 
-namespace KanbanProject
+namespace KanbanProject.Data
 {
     public class KanbanContext : DbContext
     {
@@ -16,7 +16,7 @@ namespace KanbanProject
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=KanbanDb;Trusted_Connection=true;");
-            optionsBuilder.UseNpgsql("Host=tuffi.db.elephantsql.com;Port=5432;Database=rdgqpync;User Id=rdgqpync;Password=c26o8K3Tpdoz63gj1t1aMop0Ih9QNNxA;");
+            optionsBuilder.UseNpgsql("Host=Host;Port=5432;Database=Database;User Id=Id;Password=Password;");
             base.OnConfiguring(optionsBuilder);
         }
     }

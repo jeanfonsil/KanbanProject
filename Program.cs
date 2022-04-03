@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using KanbanProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using KanbanProject;
+using KanbanProject.Data;
 
 namespace KanbanProject
 {

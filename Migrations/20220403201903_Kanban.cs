@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace KanbanProject.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Kanban : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
