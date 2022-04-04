@@ -1,4 +1,6 @@
-﻿using KanbanProjectFinal.Data;
+﻿using AutoMapper;
+using KanbanProjectFinal.Data;
+using KanbanProjectFinal.Data.Dtos;
 using KanbanProjectFinal.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,15 +11,19 @@ namespace KanbanProjectFinal.Controllers
     public class UserController : ControllerBase
     {
         private KanbanContext _context;
+        private IMapper _mapper;
 
-        public UserController(KanbanContext context)
+        public UserController(KanbanContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public IActionResult AddUser([FromBody] User user)
+        public IActionResult AddUser([FromBody] UserDto userDto)
         {
+            User user = _mapper.Map<User>(userDto);
+
             _context.Users.Add(user);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetUserId), new { Id = user.Id }, user);
@@ -34,20 +40,21 @@ namespace KanbanProjectFinal.Controllers
             User user = _context.Users.FirstOrDefault(user => user.Id == id);
             if (user != null)
             {
+                UserDto userDto = _mapper.Map<UserDto>(user);
                 return Ok(user);
             }
             return NotFound();
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateUser(int id, [FromBody] User newUser)
+        public IActionResult UpdateUser(int id, [FromBody] UserDto userDto)
         {
             User user = _context.Users.FirstOrDefault(user => user.Id == id);
             if(user == null)
             {
                 return NotFound();
             }
-            user.Name = newUser.Name;
+            _mapper.Map(userDto, user);
             _context.SaveChanges();
             return NoContent();
         }

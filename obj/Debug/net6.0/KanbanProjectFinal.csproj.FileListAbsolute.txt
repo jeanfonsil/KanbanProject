@@ -33,3 +33,5 @@ C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Humanizer.dll
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\jeanf\source\repos\KanbanProjectFinal\KanbanProjectFinal\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

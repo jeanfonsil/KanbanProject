@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/zOBXTvB5swBfDeuRvy8xH2EIPIbsjoPtmV8gkDZIwv91BQqQCA7WZQrZ7bPTxIKnQJKyUtYcdRktI2MiYAoGw==",
+  "dgSpecHash": "qfswQ7P0x2/qWrcQ6rmECjji8JWqLYVyTy31d5Cpa8MMHLVA0BDqdJqweB+2E3EIBgbq2Mt54wVIBKhyGmsdQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jeanf\\source\\repos\\KanbanProjectFinal\\KanbanProjectFinal\\KanbanProjectFinal.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jeanf\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.3\\microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.3\\microsoft.entityframeworkcore.analyzers.6.0.3.nupkg.sha512",
