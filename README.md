@@ -4,9 +4,9 @@ PT-BR
 
 Este é um projeto em desenvolvimento para estudo e treinamento em uma formação inicial de programação em C# .NET, onde a entrega do mesmo é dividida em 3, que seguem abaixo:
 
-## v0.1 - Primeira entrega: Implementação de todas as entidades do projeto (Usuários, Cartões e Sprints)
+## v0.1 - Primeira etapa: Implementação de todas as entidades do projeto (Usuários, Cartões e Sprints)
 
-Nesta primeira entrega, foi feito a criação das entidades que serão utilizadas no projeto e suas ligações.
+Nesta primeira etapa, foi feito a criação das entidades que serão utilizadas no projeto e suas ligações.
 Criou-se os arquivos: 
 
 - User.cs
@@ -31,7 +31,7 @@ Aqui foram criados todas as propriedades necessárias para a criação do usuár
 6. SprintId - Chave estrangeira da classe Sprint;
 7. Status - Estado que o cartão se encontra: Não iniciado, em andamento ou finalizado.
 
-## Segunda entrega: Implementação do banco de dados, migrations e criação das tabelas.
+## v0.2 - Segunda etapa: Implementação do banco de dados, migrations e criação das tabelas.
 
 Nesta etapa foi feito a criação do banco de dados utilizando o Postgresql e ElephantSql. Através do auxílio do Entity Framework foi possível a configuração das tabelas que foram criadas a partir das propriedades das entidades User, Sprint e Card. Utilizando migration montou-se e atualizou-se as tabelas para as configurações necessárias.
 
