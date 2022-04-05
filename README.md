@@ -33,6 +33,10 @@ Aqui foram criados todas as propriedades necessárias para a criação do usuár
 
 ## Segunda entrega: Implementação do banco de dados, migrations e criação das tabelas.
 
+Nesta etapa foi feito a criação do banco de dados utilizando o Postgresql e ElephantSql. Através do auxílio do Entity Framework foi possível a configuração das tabelas que foram criadas a partir das propriedades das entidades User, Sprint e Card. Utilizando migration montou-se e atualizou-se as tabelas para as configurações necessárias.
+
+Assim nesta etapa, através de um algoritmo provisório, é possível observar a criação e exclusão de cada entidade no banco de dados, já conectado a nuvem através do ElephantSql.
+
 ## Terceira entrega: Implementação completa do projeto, onde engloba todos onde endpoints da API.
 
 Em andamento
