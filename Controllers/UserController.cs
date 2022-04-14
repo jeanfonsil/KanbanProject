@@ -20,7 +20,7 @@ namespace KanbanProjectFinal.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddUser([FromBody] UserDto userDto)
+        public IActionResult AddUser([FromBody] CreateUserDto userDto)
         {
             User user = _mapper.Map<User>(userDto);
 
@@ -40,23 +40,10 @@ namespace KanbanProjectFinal.Controllers
             User user = _context.Users.FirstOrDefault(user => user.Id == id);
             if (user != null)
             {
-                UserDto userDto = _mapper.Map<UserDto>(user);
-                return Ok(user);
+                ReadUserDto userDto = _mapper.Map<ReadUserDto>(user);
+                return Ok(userDto);
             }
             return NotFound();
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult UpdateUser(int id, [FromBody] UserDto userDto)
-        {
-            User user = _context.Users.FirstOrDefault(user => user.Id == id);
-            if(user == null)
-            {
-                return NotFound();
-            }
-            _mapper.Map(userDto, user);
-            _context.SaveChanges();
-            return NoContent();
         }
 
         [HttpDelete("{id}")]

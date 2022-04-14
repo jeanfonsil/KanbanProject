@@ -19,11 +19,22 @@ namespace KanbanProjectFinal.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseSerialColumns();
+
+            modelBuilder.Entity<Card>()
+                .HasOne(card => card.Sprint)
+                .WithMany(sprint => sprint.Cards)
+                .HasForeignKey(card => card.SprintId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Card>()
+                .HasOne(card => card.User)
+                .WithMany(user => user.Cards)
+                .HasForeignKey(card => card.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
-
         public DbSet<User> Users { get; set; }
-        //public DbSet<Card> Cards { get; set; }
-        //public DbSet<Sprint> Sprints { get; set; }
+        public DbSet<Card> Cards { get; set; }
+        public DbSet<Sprint> Sprints { get; set; }
     }
 }

@@ -8,8 +8,11 @@ namespace KanbanProjectFinal.Profiles
     {
         public UserProfile()
         {
-            CreateMap<UserDto, User>();
-            CreateMap<User, UserDto>();
+            CreateMap<CreateUserDto, User>();
+            CreateMap<User, ReadUserDto>()
+                .ForMember(user => user.Cards, opts => opts
+                .MapFrom(user => user.Cards.Select
+                (c => new { c.Id, c.Title, c.Description, c.Sprint, c.SprintId, c.User, c.UserId, c.Status })));
         }
 
     }
