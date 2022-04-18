@@ -5,6 +5,7 @@ using KanbanProjectFinal.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using KanbanProjectFinal.Models;
 
 namespace KanbanProjectFinal.Controllers
 {
@@ -91,11 +92,69 @@ namespace KanbanProjectFinal.Controllers
                 SumTask = SumTask + NumTask[i];
             }
 
-            PercentTask[0] = (NumTask[0] / SumTask) * 100;
-            PercentTask[1] = (NumTask[1] / SumTask) * 100;
-            PercentTask[2] = (NumTask[2] / SumTask) * 100;
+            for (int j = 0; j < 3; j++)
+            {
+                PercentTask[j] = (NumTask[j] / SumTask) * 100;
+            }            
 
             return Ok(PercentTask);
-        }        
+        }
+
+        [HttpGet]
+        [Route("TaskProgressPerUser")]
+        public IActionResult TaskProgressPerUser()
+        {
+            var cards = _context.Cards;
+            decimal SumTaskUser = 0;
+            decimal[] PercentTaskUser = new decimal[3];
+
+            var teste = cards
+                .GroupBy(card => card.UserId)
+                .Select(Group => new { Group.Key, TotalEstimate = Group.Sum(card => card.Estimate) });
+
+            int cont = 0;
+            int x = 0;
+
+            foreach (var a in teste)
+            {
+                cont++;
+            }
+            int[] KeyVector = new int[cont];
+            foreach (var a in teste)
+            {
+                Console.WriteLine("Key: {0}", a.Key);
+                Console.WriteLine("Total Estimate: {0}", a.TotalEstimate);
+                KeyVector[x] = a.Key;
+                x++;
+            }
+
+            Console.WriteLine("Cont {0}", KeyVector);
+            Console.WriteLine("Cont {0}", cont);
+            decimal[,] NumTaskUser = new decimal[cont,3];
+            for (int i = 0; i < cont; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    NumTaskUser[i,j] = (decimal)cards
+                        .Where(card => (int)card.Status == j)
+                        .Where(card => (int)card.UserId == KeyVector[i])
+                        .Select(card => card.Estimate).Sum();
+                    //SumTaskUser = SumTaskUser + NumTaskUser[i,j];
+                }
+            }
+
+            decimal[][] ShowRow = new decimal[cont][];
+
+            for (int k = 0; k < cont; k++)
+            {
+                ShowRow[k] = Matrix.GetRow(NumTaskUser, k);
+            }
+
+            //PercentTaskUser[0] = (NumTaskUser[0] / SumTaskUser) * 100;
+            //PercentTaskUser[1] = (NumTaskUser[1] / SumTaskUser) * 100;
+            //PercentTaskUser[2] = (NumTaskUser[2] / SumTaskUser) * 100;
+
+            return Ok(ShowRow);
+        }                
     }
 }
