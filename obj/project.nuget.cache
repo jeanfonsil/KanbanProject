@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qfswQ7P0x2/qWrcQ6rmECjji8JWqLYVyTy31d5Cpa8MMHLVA0BDqdJqweB+2E3EIBgbq2Mt54wVIBKhyGmsdQg==",
+  "dgSpecHash": "R30WA3ukMETW6VlboFH7sS6ANu+NEB8jut6QG96yGIeAyIJwhAtiV8W58yELMapFbjW0Ie1BV4D2DAMhOn4Bjg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jeanf\\source\\repos\\KanbanProjectFinal\\KanbanProjectFinal\\KanbanProjectFinal.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,8 @@
     "C:\\Users\\jeanf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\jeanf\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\jeanf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\jeanf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\jeanf\\.nuget\\packages\\system.runtime.experimental\\6.0.0-preview.7.21377.19\\system.runtime.experimental.6.0.0-preview.7.21377.19.nupkg.sha512"
   ],
   "logs": []
 }

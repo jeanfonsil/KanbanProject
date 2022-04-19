@@ -104,9 +104,7 @@ namespace KanbanProjectFinal.Controllers
         [Route("TaskProgressPerUser")]
         public IActionResult TaskProgressPerUser()
         {
-            var cards = _context.Cards;
-            decimal SumTaskUser = 0;
-            decimal[] PercentTaskUser = new decimal[3];
+            var cards = _context.Cards;           
 
             var teste = cards
                 .GroupBy(card => card.UserId)
@@ -139,22 +137,25 @@ namespace KanbanProjectFinal.Controllers
                         .Where(card => (int)card.Status == j)
                         .Where(card => (int)card.UserId == KeyVector[i])
                         .Select(card => card.Estimate).Sum();
-                    //SumTaskUser = SumTaskUser + NumTaskUser[i,j];
                 }
             }
 
             decimal[][] ShowRow = new decimal[cont][];
+            decimal[][] PercentTaskUser = new decimal[cont][];
+            decimal[] SumTaskUser = new decimal[cont];
+
 
             for (int k = 0; k < cont; k++)
             {
                 ShowRow[k] = Matrix.GetRow(NumTaskUser, k);
-            }
+                SumTaskUser[k] = ShowRow[k].Sum();
+                PercentTaskUser[k] = Matrix.GetPercentage(NumTaskUser, k, SumTaskUser[k]);
+            }         
 
-            //PercentTaskUser[0] = (NumTaskUser[0] / SumTaskUser) * 100;
-            //PercentTaskUser[1] = (NumTaskUser[1] / SumTaskUser) * 100;
-            //PercentTaskUser[2] = (NumTaskUser[2] / SumTaskUser) * 100;
 
-            return Ok(ShowRow);
+            //PercentTaskUser[k][0] = ShowRow[k][0] / SumTaskUser[k];
+
+            return Ok(PercentTaskUser);
         }                
     }
 }

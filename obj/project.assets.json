@@ -385,6 +385,12 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "System.Runtime.Experimental/6.0.0-preview.7.21377.19": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.dll": {}
+        }
       }
     }
   },
@@ -1058,6 +1064,23 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "System.Runtime.Experimental/6.0.0-preview.7.21377.19": {
+      "sha512": "zbEU1x2RNwntv6teF8nOe5Ogeol540Wagb6Oy5rP0u/WoQHOoyMukp+IQInjVNa9pFKDiMjscm8QBMxa7JEMXA==",
+      "type": "package",
+      "path": "system.runtime.experimental/6.0.0-preview.7.21377.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "ref/net6.0/System.Runtime.dll",
+        "ref/net6.0/System.Runtime.xml",
+        "system.runtime.experimental.6.0.0-preview.7.21377.19.nupkg.sha512",
+        "system.runtime.experimental.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1066,7 +1089,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.3",
       "Npgsql >= 6.0.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.3",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "System.Runtime.Experimental >= 6.0.0-preview.7.21377.19"
     ]
   },
   "packageFolders": {
@@ -1129,6 +1153,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "System.Runtime.Experimental": {
+            "target": "Package",
+            "version": "[6.0.0-preview.7.21377.19, )"
           }
         },
         "imports": [
