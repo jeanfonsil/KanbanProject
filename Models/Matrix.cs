@@ -17,10 +17,6 @@ namespace KanbanProjectFinal.Models
             return rowVector;
         }
 
-
-
-
-
         public static T[] GetPercentage<T>(T[,] matrix, int row, T Sum)
         {
             var rowLength = matrix.GetLength(1);
@@ -30,7 +26,7 @@ namespace KanbanProjectFinal.Models
             for (var i = 0; i < rowLength; i++)
             {
                 rowVector[i] = matrix[row, i];
-                rowVectorSum[i] = (T)(object)((dynamic)rowVector[i] / Sum);
+                rowVectorSum[i] = (T)(object)(((dynamic)rowVector[i] / Sum)*100);
             }
             return rowVectorSum;
         }

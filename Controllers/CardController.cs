@@ -77,48 +77,34 @@ namespace KanbanProjectFinal.Controllers
         [HttpGet]
         [Route("TaskProgress")]
         public IActionResult TaskProgress()
-        {
-            decimal[] NumTask = new decimal[3];
-            decimal[] PercentTask = new decimal[3];
-            var cards = _context.Cards;
+        {            
+            var NumTaskPercent = _context.CardSums.FromSqlRaw("SELECT \"Status\", " +
+                "SUM((\"Estimate\") / (SELECT SUM(\"Estimate\") FROM \"Cards\"))*100 as \"PercentTask\"" +
+                "FROM \"Cards\"GROUP BY \"Status\" " +
+                "ORDER BY \"Status\"");            
 
-            decimal SumTask = 0;
-
-            for (int i = 0; i < 3; i++)
-            {
-                NumTask[i] = (decimal)cards
-                .Where(card => (int)card.Status == i)
-                .Select(card => card.Estimate).Sum();
-                SumTask = SumTask + NumTask[i];
-            }
-
-            for (int j = 0; j < 3; j++)
-            {
-                PercentTask[j] = (NumTask[j] / SumTask) * 100;
-            }            
-
-            return Ok(PercentTask);
+            return Ok(NumTaskPercent);
         }
-
+ 
         [HttpGet]
         [Route("TaskProgressPerUser")]
         public IActionResult TaskProgressPerUser()
         {
             var cards = _context.Cards;           
 
-            var teste = cards
+            var cardGroup = cards
                 .GroupBy(card => card.UserId)
                 .Select(Group => new { Group.Key, TotalEstimate = Group.Sum(card => card.Estimate) });
 
-            int cont = 0;
+            int cont = cardGroup.Count();
             int x = 0;
 
-            foreach (var a in teste)
-            {
-                cont++;
-            }
+            //foreach (var a in cardGroup)
+            //{
+            //    cont++;
+            //}
             int[] KeyVector = new int[cont];
-            foreach (var a in teste)
+            foreach (var a in cardGroup)
             {
                 Console.WriteLine("Key: {0}", a.Key);
                 Console.WriteLine("Total Estimate: {0}", a.TotalEstimate);
@@ -149,8 +135,8 @@ namespace KanbanProjectFinal.Controllers
             {
                 ShowRow[k] = Matrix.GetRow(NumTaskUser, k);
                 SumTaskUser[k] = ShowRow[k].Sum();
-                PercentTaskUser[k] = Matrix.GetPercentage(NumTaskUser, k, SumTaskUser[k]);
-            }         
+                PercentTaskUser[k] = Matrix.GetPercentage(NumTaskUser, k, SumTaskUser[k]);                
+            }       
 
 
             //PercentTaskUser[k][0] = ShowRow[k][0] / SumTaskUser[k];

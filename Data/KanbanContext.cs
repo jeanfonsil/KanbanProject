@@ -31,10 +31,13 @@ namespace KanbanProjectFinal.Data
                 .WithMany(user => user.Cards)
                 .HasForeignKey(card => card.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<CardSum>().HasNoKey();
         }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Card> Cards { get; set; }
         public DbSet<Sprint> Sprints { get; set; }
+        public DbSet<CardSum> CardSums { get; set; }
     }
 }
